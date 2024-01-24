@@ -10,7 +10,9 @@ export class NgrokServer extends ChildProcess {
   private retries = 5;
   private cancel?: CancelFN;
   static TaskQueue = new TaskQueue();
-  static LoaderPath = path.resolve(__dirname, "RNModulePaths.ts");
+  static readonly ESM_PREFIX = "static DESTINATION";
+  static readonly CJS_PREFIX = "RNModulePaths.DESTINATION";
+  static LoaderPath = path.resolve(__dirname, "RNModulePaths.js");
   constructor(options: IOptions) {
     super(`ngrok http ${options.port}`, {
       stdio: "ignore",
@@ -65,12 +67,12 @@ export class NgrokServer extends ChildProcess {
     for (const line of lines) {
       let found = false;
       const current = line.trim();
-      if (current.startsWith("static DESTINATION")) {
+      if (current.startsWith(NgrokServer.ESM_PREFIX)) {
         found = true;
-        lines[lineNumber] = `static DESTINATION = "${URL}/modules";`;
-      } else if (current.startsWith("RNModulePaths.DESTINATION =")) {
+        lines[lineNumber] = `${NgrokServer.ESM_PREFIX} = "${URL}/modules";`;
+      } else if (current.startsWith(NgrokServer.CJS_PREFIX)) {
         found = true;
-        lines[lineNumber] = `static DESTINATION = "${URL}/modules";`;
+        lines[lineNumber] = `${NgrokServer.CJS_PREFIX} = "${URL}/modules";`;
       }
       if (found) {
         const nextLine = lineNumber + 1;

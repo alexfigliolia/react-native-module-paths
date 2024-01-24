@@ -30,7 +30,7 @@ export class ModuleServer extends Options {
     server.listen(this.port, ModuleServer.HOST, () => {
       Logger.info("Listening for Preloaded Module Paths");
       Logger.info(
-        `As you make changes to your app, your're ${Logger.BLUE(
+        `As you make changes to your app, your ${Logger.BLUE(
           "modulePaths",
         )} file will update automatically!`,
       );
