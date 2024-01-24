@@ -5,7 +5,7 @@ When working with React Native RAM Bundles, your metro config consumes your prel
 
 The process of manually synchronizing the module paths during development became a bit tedious - and difficult to properly verify for large teams.
 
-Using this package, you spin up a simple CLI that will update your module paths each time a new file is added, removed, or renamed.
+Using this package, you can spin up a simple CLI that will update your module paths each time a new critical file is added, removed, or renamed.
 
 ## Installation
 ```bash
