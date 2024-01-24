@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { DevServer } from "./DevServer";
 import { Options } from "./Options";
 

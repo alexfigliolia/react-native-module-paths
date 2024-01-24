@@ -14,7 +14,9 @@
   "main": "dist/cjs/index.js",
   "module": "dist/mjs/index.js",
   "types": "dist/types/index.d.ts",
-  "bin": "./dist/cjs/stealth/CLI.js",
+  "bin": {
+    "rn-module-paths": "dist/cjs/CLI.js"
+  },
   "files": [
     "dist",
     "src/*"
