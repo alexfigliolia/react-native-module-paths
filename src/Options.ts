@@ -37,7 +37,7 @@ export class Options implements IOptions {
         },
         path: {
           type: "string",
-          short: "p",
+          short: "w",
           default: this.defaultOptions.path,
         },
       },
