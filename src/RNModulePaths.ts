@@ -1,8 +1,7 @@
 import type { RNRequire } from "./types";
 
 export class RNModulePaths {
-  static DESTINATION =
-    "https://6158-2601-646-c200-3cd0-7c37-7599-5d6-567a.ngrok-free.app/modules";
+  static DESTINATION = "";
 
   public static registerAssets() {
     const loadedModules = this.parseLoaded();
