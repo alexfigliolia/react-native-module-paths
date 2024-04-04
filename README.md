@@ -53,7 +53,7 @@ With this running, anytime you add, delete, or rename a critical file in your ap
 #### `--port | -p`
 An option to override the default port number (4321)
 #### `--path | -w`
- A path to your `modulePaths.js` file. It will default to `process.cwd()/modulePath.js`
+ A path to your `modulePaths.js` file. It will default to `process.cwd()/modulePaths.js`
 #### `--format | -f`
 Whether or not to format your module paths file for legibility when it's updated. This options defaults to true and runs `prettier` directly on the file.
 
