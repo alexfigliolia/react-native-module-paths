@@ -16,6 +16,16 @@ npm i -D react-native-module-paths
 npm link
 ```
 
+### Curl
+```bash
+# Mac
+brew install curl
+# Linux 
+sudo apt-get install curl
+# Windows
+choco install curl
+```
+
 ### Ngrok
 Next, sign up for a free account at `https://ngrok.com` then click on "Set Up and Installation". 
 
@@ -48,7 +58,7 @@ An option to override the default port number (4321)
 Whether or not to format your module paths file for legibility when it's updated. This options defaults to true and runs `prettier` directly on the file.
 
 ### Dev Loop Tips
-When building this package, my development setup for React Native projects looks like the following:
+When using this package, my development setup for React Native projects looks like the following:
 
 ```typescript
 // DevServer.ts
