@@ -94,7 +94,7 @@ export class DevServer extends ChildProcess {
 }
 
 (async () => {
-  await DevServer().run();
+  await DevServer.run();
 })().catch(console.log);
 ```
 
