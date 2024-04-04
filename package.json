@@ -1,6 +1,6 @@
 {
   "name": "react-native-module-paths",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A small dev server to automatically sync your module paths for RAM bundling",
   "license": "MIT",
   "author": "Alex Figliolia",
