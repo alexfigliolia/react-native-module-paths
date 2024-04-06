@@ -40,7 +40,18 @@ choco install ngrok
 ngrok config add-authtoken <your-token>
 # Your token can be found here: "https://dashboard.ngrok.com/get-started/setup/"
 ```
-With ngrok setup, you can now spin up the `react-native-module-paths` CLI when developing your app:
+
+### Registering your Module Paths
+In the entrypoint of your application, add the following two lines:
+
+```typescript
+if (__DEV__) {
+  const { RNModulePaths } = require("react-native-module-paths");
+  RNModulePaths.registerAssets();
+}
+```
+
+Now you can now spin up the `react-native-module-paths` CLI when developing your app:
 
 ```bash
 npx react-native-module-paths
