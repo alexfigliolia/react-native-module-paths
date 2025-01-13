@@ -1,6 +1,6 @@
 {
   "name": "react-native-module-paths",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A small dev server to automatically sync your module paths for RAM bundling",
   "license": "MIT",
   "author": "Alex Figliolia",
@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@figliolia/child-process": "^1.0.4",
-    "@figliolia/task-queue": "^1.0.7",
+    "@figliolia/task-queue": "^1.0.8",
     "axios": "^1.4.0",
     "chalk": "4.1.2"
   },
